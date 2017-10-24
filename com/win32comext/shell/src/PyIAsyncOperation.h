@@ -4,6 +4,12 @@
 //
 // Interface Declaration
 
+#if _MSC_VER >= 1900
+#include "Shldisp.h"
+#define IAsyncOperation IDataObjectAsyncCapability
+#define IID_IAsyncOperation IID_IDataObjectAsyncCapability
+#endif
+
 class PyIAsyncOperation : public PyIUnknown
 {
 public:
